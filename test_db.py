@@ -5,7 +5,7 @@ try:
     connection = mysql.connector.connect(
         host="localhost",
         user="root",
-        password="......"  # <-- Change this!
+        password="....."  # <-- Change this!
     )
 
     if connection.is_connected():
@@ -31,6 +31,16 @@ try:
         """)
         print("Table 'users' created successfully.")
 
+        cursor.execute(
+            """insert into users(name,email) values("akash","akash@gmail.com");"""
+        )
+        print("data inserted successfully")
+
+        cursor.execute(
+            "select * from users;"
+        )
+        for row in cursor:
+            print(row)
 except mysql.connector.Error as error:
     print(f"Something went wrong: {error}")
 
