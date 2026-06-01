@@ -19,11 +19,11 @@ try:
         cursor.execute("show tables;")
         
         # 2. Fetch all rows returned by the query
-        tables = cursor.fetchall()
+       # tables = cursor.fetchall()
         
         print("--- Tables in python_demo ---")
         # 3. Loop through and print each table name
-        for table in tables:
+        for table in cursor:
             print(table[0])  # table[0] gets the string out of the tuple
             
 except mysql.connector.Error as error:
