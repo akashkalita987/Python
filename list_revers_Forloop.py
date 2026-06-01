@@ -1,8 +1,5 @@
-original_list = ["DBMS", "OS", "AWP", "AT", "Python"]
-reversed_list = []
-
-for item in original_list:
-    # Insert each item at the beginning of the new list
-    reversed_list.insert(0, item)
-
-print(reversed_list)  # Output: [5, 4, 3, 2, 1]
+org_list = ["ajk","pk","gk"]
+rev_list = []
+for items in org_list:
+    rev_list.insert(0,items)
+print(rev_list)
