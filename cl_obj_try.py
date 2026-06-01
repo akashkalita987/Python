@@ -1,12 +1,17 @@
-num =int(input("enter the number"))
 even_sum = 0
 odd_sum = 0
-for numbers in range(1,num+1):
-    if numbers%2 == 0:
-        print(f"Even numbers are {numbers}")
-        even_sum +=numbers
-        
+
+# We keep it as a string so we can loop through each digit
+num_str = input("Enter the number: ") 
+
+for digit_char in num_str:
+    digit = int(digit_char) # Convert the single character back to an integer
+    if digit % 2 == 0:
+        even_sum += digit
     else: 
-        print(f"Odd numbers are {numbers}")
-        odd_sum += numbers
-print(f"Difference between sum of odd and even sum is\n{even_sum-odd_sum}")
+        odd_sum += digit
+
+print("\n--- Digit Analysis Results ---")
+print(f"Sum of Even Digits (4 + 6): {even_sum}")
+print(f"Sum of Odd Digits (3 + 5): {odd_sum}")
+print(f"Difference between digit sums: {abs(even_sum - odd_sum)}")
