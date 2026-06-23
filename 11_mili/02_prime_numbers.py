@@ -9,8 +9,6 @@ def find_primes(lower, upper):
         else:
             primes.append(num)
     return primes
-
-# Example Usage
 start = int(input("Enter lower limit: "))
 end = int(input("Enter upper limit: "))
 print(f"Prime numbers between {start} and {end}: {find_primes(start, end)}")
