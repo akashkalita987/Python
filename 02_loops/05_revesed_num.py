@@ -15,5 +15,9 @@
 
 list1 = [1,2]
 list2 = [3,4]
+list3 = [1,2]
+list4 = [3,4]
+list3 += list4
 list1.extend(list2)
+list1.extend(list3)
 print(list1)
