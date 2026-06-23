@@ -2,7 +2,6 @@
 # spectrum of the hydrogen atom, based on the Rydberg formula:
 # 1/\lambda = R * (1/m^2 - 1/n^2)
 # The value of R = 1.097 x 10^-2 m^-1 (Note: Adjusted to 1.097e7 for physical accuracy)
-
 def calculate_wavelength(m, n):
     if n <= m:
         return "Error: 'n' must be greater than 'm'."
