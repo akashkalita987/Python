@@ -1,32 +1,9 @@
-def menu_driven_cal():
-    while True:
-        print("\n-----simple calculator----")
-        print("1 Add")
-        print("2 Subtract")
-        print("3 Multiply")
-        print("4 Divide")
-        print("5 Exit")
+def is_palindrome(number):
+    org = number
+    rev_num = 0
 
-        choice = input("Choose an option (1-5):")
+    while org>0:
+        rev_num = org%10
+        print(rev_num)
 
-        if choice == "5":
-            print("Goodbye")
-            break
 
-        if choice in ["1","2","3","4"]:
-            num1 = float(input("Enter first number"))
-            num2 = float(input("Enter second number"))
-
-            if choice == "1":
-                print(f"Result:{num1 + num2}")
-            elif choice == "2":
-                print(f"result:{num1 - num2}")
-            elif choice == "3":
-                print(f"result{num1 * num2}")
-            elif choice == "4":
-                if num2 == 0:
-                    print("Error! cannot divide by zero")
-                else:
-                    print(f"result{num1 / num2}")
-
-menu_driven_cal()
