@@ -1,27 +1,6 @@
 def menu_driven_calculator():
-    def get_number(prompt):
-        while True:
-            try:
-                return float(input(prompt))
-            except ValueError:
-                print("Invalid number. Please enter a valid numeric value.")
-
-    def add(a, b):
-        return a + b
-
-    def subtract(a, b):
-        return a - b
-
-    def multiply(a, b):
-        return a * b
-
-    def divide(a, b):
-        if b == 0:
-            return None
-        return a / b
-
     while True:
-        print("\nSimple Menu-Driven Calculator")
+        print("\n--- Simple Calculator ---")
         print("1. Add")
         print("2. Subtract")
         print("3. Multiply")
@@ -30,35 +9,29 @@ def menu_driven_calculator():
 
         choice = input("Choose an option (1-5): ")
 
+        # 1. Check for exit first
         if choice == "5":
             print("Goodbye!")
             break
 
-        if choice not in {"1", "2", "3", "4"}:
-            print("Invalid choice. Enter 1, 2, 3, 4, or 5.")
-            continue
+        # 2. If choice is valid, get numbers and perform the operation
+        if choice in ["1", "2", "3", "4"]:
+            num1 = float(input("Enter first number: "))
+            num2 = float(input("Enter second number: "))
 
-        num1 = get_number("Enter the first number: ")
-        num2 = get_number("Enter the second number: ")
-
-        if choice == "1":
-            result = add(num1, num2)
-            op = "+"
-        elif choice == "2":
-            result = subtract(num1, num2)
-            op = "-"
-        elif choice == "3":
-            result = multiply(num1, num2)
-            op = "*"
+            if choice == "1":
+                print(f"Result: {num1} + {num2} = {num1 + num2}")
+            elif choice == "2":
+                print(f"Result: {num1} - {num2} = {num1 - num2}")
+            elif choice == "3":
+                print(f"Result: {num1} * {num2} = {num1 * num2}")
+            elif choice == "4":
+                if num2 == 0:
+                    print("Error: Cannot divide by zero.")
+                else:
+                    print(f"Result: {num1} / {num2} = {num1 / num2}")
         else:
-            result = divide(num1, num2)
-            op = "/"
+            print("Invalid choice. Please enter a number from 1 to 5.")
 
-        if result is None:
-            print("Error: Cannot divide by zero.")
-        else:
-            print(f"{num1} {op} {num2} = {result}")
-
-
-if __name__ == "__main__":
-    menu_driven_calculator()
+# Run the calculator
+menu_driven_calculator()
