@@ -13,7 +13,7 @@ print(f"Shape of 2D Array: {arr_2d.shape}\n")
 
 # Generating arrays using built-in helpers
 zeros = np.zeros((2, 4))      # 2x4 matrix of zeros
-sequence = np.arange(0, 10, 2) # Array from 0 to 8, stepping by 2
+sequence = np.arange(0, 12, 2) # Array from 0 to 8, stepping by 2
 print(f"Zeros Matrix:\n{zeros}")
 print(f"Sequence Array: {sequence}\n")
 
